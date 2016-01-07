@@ -17,7 +17,7 @@
 		<pathelement location="build/WEB-INF/classes"/>
 	</path>
 
-	<target name="all" depends="compile, build, deploy, deploy-jsps, test, zap-test "/>
+	<target name="all" depends="test, zap-test "/>
 	<target name="hack">
 		<echo message="file=$(ant.file) home=${ant.home} bodge=${bodgeit.home}"/>
 	</target>
