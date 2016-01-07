@@ -236,7 +236,7 @@
 		<sleep seconds="5"/>
 
 		<!-- Active scan the whole site -->
-		<antcall target="zap-ascan"/>		
+		<!-- If required, please include this again, but for now disabling as it takes too long to run... <antcall target="zap-ascan"/>		-->
 
 		<sleep seconds="3"/>
 
