@@ -25,6 +25,7 @@
 	<!-- Compile all of the source code -->
 	<target name="compile">
 		<!-- Compile the java code -->
+		<mkdir dir="build/WEB-INF/classes"/>
 		<javac target="1.5" destdir="build/WEB-INF/classes" srcdir="src" classpathref="java.classpath" />
 	</target>
 
