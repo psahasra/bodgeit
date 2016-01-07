@@ -57,6 +57,7 @@
 
 	<target name="test">
         <!-- Run the JUnit tests -->
+		<mkdir dir="build/tests"/>
         <junit printsummary="yes">
             <classpath>
         		<fileset dir="root/WEB-INF/lib">
