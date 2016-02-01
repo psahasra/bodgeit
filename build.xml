@@ -22,6 +22,7 @@
 	
 	<target name="hack">
 		<echo message="file=$(ant.file) home=${ant.home} bodge=${bodgeit.home}"/>
+		<echo message="${java.classpath}"/>
 	</target>
 		
 
