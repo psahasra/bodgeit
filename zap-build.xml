@@ -49,7 +49,7 @@
 
 	<target name="startZapDaemon">
 		<java classname="org.zaproxy.zap.ZAP" fork="true" spawn="true" dir="${zap.dir}">
-			<arg value="-daemon"/>
+			<arg value="-daemon -config api.disablekey=true"/>
 			<classpath>
 				<pathelement location="${zap.dir}/zap.jar"/>
 			</classpath>
