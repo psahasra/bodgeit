@@ -1,4 +1,4 @@
-<project basedir="." default="compile">
+<project basedir="." default="all">
 
 	<!-- This file contains all of the environment specific configuration, change it for your setup -->
     <property file="local.properties"/>
@@ -16,8 +16,7 @@
 		</fileset>
 		<pathelement location="build/WEB-INF/classes"/>
 	</path>
-
-	<target name="all" depends="test, zap-test"/>
+	<target name="all" depends="hack, compile, build, deploy, deploy-jsps, test, zap-proxy-tests, zap-test" />
 	<target name="hack">
 		<echo message="file=$(ant.file) home=${ant.home} bodge=${bodgeit.home}"/>
 	</target>
@@ -26,7 +25,6 @@
 	<!-- Compile all of the source code -->
 	<target name="compile">
 		<!-- Compile the java code -->
-		<mkdir dir="build/WEB-INF/classes"/>
 		<javac target="1.5" destdir="build/WEB-INF/classes" srcdir="src" classpathref="java.classpath" />
 	</target>
 
@@ -57,7 +55,6 @@
 
 	<target name="test">
         <!-- Run the JUnit tests -->
-		<mkdir dir="build/tests"/>
         <junit printsummary="yes">
             <classpath>
         		<fileset dir="root/WEB-INF/lib">
@@ -236,7 +233,7 @@
 		<sleep seconds="5"/>
 
 		<!-- Active scan the whole site -->
-		<!-- If required, please include this again, but for now disabling as it takes too long to run... <antcall target="zap-ascan"/>		-->
+		<antcall target="zap-ascan"/>		
 
 		<sleep seconds="3"/>
 
