@@ -16,7 +16,7 @@
 		</fileset>
 		<pathelement location="build/WEB-INF/classes"/>
 	</path>
-	<echo messgae="new build file"/>
+	
 	<target name="all" depends="hack, compile, build, deploy, deploy-jsps, test, zap-proxy-tests, zap-test" />
 	
 	
