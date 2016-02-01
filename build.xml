@@ -17,7 +17,7 @@
 		<pathelement location="build/WEB-INF/classes"/>
 	</path>
 	
-	<target name="all" depends="hack, compile, build, deploy, deploy-jsps, test, zap-proxy-tests, zap-test" />
+	<target name="all" depends="hack, compile, build, test, zap-proxy-tests, zap-test" />
 	
 	
 	<target name="hack">
